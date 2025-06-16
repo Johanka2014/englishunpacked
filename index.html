@@ -13,63 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: ##fafafa; /* White */
-        }
-        .gradient-bg {
-            background-color: #1e3a8a; /* A deep blue for a professional look */
-            background-image: radial-gradient(circle at top left, #3b82f6, transparent 60%);
-        }
-        .section-title {
-            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center;
-        }
-        .card {
-            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
-        }
-        .btn {
-            @apply px-6 py-3 rounded-lg font-semibold text-white transition-transform duration-300;
-        }
-        .btn-primary {
-            @apply bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transform hover:-translate-y-1;
-        }
-        .btn-secondary {
-            @apply bg-green-500 hover:bg-green-600 shadow-md hover:shadow-lg transform hover:-translate-y-1;
-        }
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
-        .font-pacifico {
-            font-family: 'Pacifico', cursive;
-        }
-        
-        /* Animation Styles */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .animate-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        /* For hero text animation on load */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .fade-in-up {
-            opacity: 0; /* Start hidden */
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-    </style>
 </head>
 <body>
 
@@ -121,7 +67,7 @@
                     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <!-- Service Card 1 -->
                         <div class="card text-center p-8 animate-on-scroll" style="transition-delay: 100ms;">
-                            <div class="flex justify-center mb-4 h-24">
+                            <div class="flex justify-center mb-4 h-40">
                                 <img src="https://static.wixstatic.com/media/0f55f2_f9f793af7f2047e3934b57ce8a2d1f4f~mv2.jpg" alt="Business English" class="h-full w-auto object-cover rounded-lg">
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Business English</h3>
@@ -129,7 +75,7 @@
                         </div>
                         <!-- Service Card 2 -->
                         <div class="card text-center p-8 animate-on-scroll" style="transition-delay: 200ms;">
-                           <div class="flex justify-center mb-4 h-24">
+                           <div class="flex justify-center mb-4 h-40">
                                 <img src="https://static.wixstatic.com/media/0f55f2_78ab4c9e2ff74ac4ace5b4f4abd575a8~mv2.png" alt="Conversational English" class="h-full w-auto object-cover rounded-lg">
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Conversational English</h3>
@@ -137,7 +83,7 @@
                         </div>
                         <!-- Service Card 3 -->
                          <div class="card text-center p-8 animate-on-scroll" style="transition-delay: 300ms;">
-                           <div class="flex justify-center mb-4 h-24">
+                           <div class="flex justify-center mb-4 h-40">
                                 <img src="https://static.wixstatic.com/media/0f55f2_d407d35463f34bda97aa4380b4f91264~mv2.jpg" alt="Exam Preparation" class="h-full w-auto object-cover rounded-lg">
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Exam Preparation</h3>
@@ -282,3 +228,4 @@
 
 </body>
 </html>
+
