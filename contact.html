@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - English Unpacked</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Pacifico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="https://johanka2014.github.io/englishunpacked/style.css">
+
+</head>
+<body>
+
+    <!-- Main site container with border -->
+    <div class="max-w-screen-2xl mx-auto bg-gray-50 shadow-2xl border-x-8 border-blue-800">
+
+        <!-- Header Placeholder -->
+        <div id="header-placeholder"></div>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Page Title Section -->
+            <section class="gradient-bg text-white py-16">
+                <div class="container mx-auto px-6 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold">Get in Touch</h1>
+                    <p class="text-lg md:text-xl text-blue-100 mt-2">I'd love to hear from you! Let's start the conversation.</p>
+                </div>
+            </section>
+
+            <!-- Content Section -->
+            <section class="py-16 md:py-24">
+                <div class="container mx-auto px-6">
+                    <div class="grid md:grid-cols-2 gap-12 items-start">
+                        <!-- Left Column: Contact Info -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Information</h2>
+                            <p class="text-gray-600 mb-6">You can reach me via email or WhatsApp for a quick response. You can also book a free sample lesson directly using the Calendly link.</p>
+                            
+                            <div class="space-y-4">
+                                <p class="flex items-center">
+                                    <svg class="w-6 h-6 mr-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                    <a href="mailto:jo.mckeogh@englishunpacked.com" class="text-blue-600 hover:underline">jo.mckeogh@englishunpacked.com</a>
+                                </p>
+                                <p class="flex items-center">
+                                <svg class="w-6 h-6 mr-3 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.634 14.127c-.207.207-.468.369-.747.472l-.12.045c-.832.315-1.713.48-2.617.48-3.974 0-7.2-3.226-7.2-7.2s3.226-7.2 7.2-7.2c3.973 0 7.199 3.226 7.199 7.2 0 .904-.165 1.785-.48 2.617l-.045.12c-.103.279-.265.54-.472.747l-2.036 2.036c-.233.233-.538.41-.869.51l-2.073.622a.75.75 0 01-.877-.877l.622-2.073c.1-.33.277-.636.51-.869l2.036-2.036zm2.341-7.151a8.955 8.955 0 00-1.583-3.136 8.956 8.956 0 00-3.136-1.583C13.36 2.062 12.69 2 12 2s-1.36.062-2.256.257a8.956 8.956 0 00-3.136 1.583 8.955 8.955 0 00-1.583 3.136C5.062 8.64 5 9.31 5 10c0 .98.196 1.914.566 2.766l.01.024a5.95 5.95 0 00.916 1.63l-1.04 3.468a.75.75 0 00.957.957l3.468-1.04a5.947 5.947 0 001.63.916l.024.01c.852.37 1.785.566 2.766.566 4.97 0 9-4.03 9-9 0-.69-.062-1.36-.257-2.256z"/></svg>
+                                    <a href="https://wa.me/+447925686846" target="_blank" class="text-blue-600 hover:underline">+44 7925 686846</a>
+                                </p>
+                            </div>
+                             <a href="https://calendly.com/english-unpacked/sample-lesson" target="_blank" class="mt-8 inline-block w-full text-center btn btn-secondary">Book a Free Sample Lesson</a>
+                        </div>
+
+                        <!-- Right Column: Contact Form -->
+                        <div class="bg-white p-8 rounded-xl shadow-lg">
+                             <h2 class="text-2xl font-bold text-gray-800 mb-4">Send me a Message</h2>
+                             <form action="#" method="POST">
+                                 <div class="mb-4">
+                                     <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                                     <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                 </div>
+                                 <div class="mb-4">
+                                     <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address</label>
+                                     <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                 </div>
+                                  <div class="mb-6">
+                                     <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+                                     <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                                 </div>
+                                 <div>
+                                     <button type="submit" class="w-full btn btn-primary">Send Message</button>
+                                 </div>
+                             </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+
+    </div>
+
+    <!-- Main script file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
