@@ -13,9 +13,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
 
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="https://johanka2014.github.io/englishunpacked/style.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1e3a8a; /* A deep blue to match the hero/footer */
+        }
+        .gradient-bg {
+            background-color: #1e3a8a; /* A deep blue for a professional look */
+            background-image: radial-gradient(circle at top left, #3b82f6, transparent 60%);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-center;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105;
+        }
+        .btn {
+            @apply px-6 py-3 rounded-lg font-semibold text-white transition-transform duration-300;
+        }
+        .btn-primary {
+            @apply bg-blue-600 hover:bg-blue-700 shadow-md hover:shadow-lg transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply bg-green-500 hover:bg-green-600 shadow-md hover:shadow-lg transform hover:-translate-y-1;
+        }
 
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+        
+        /* Animation Styles */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* For hero text animation on load */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            opacity: 0; /* Start hidden */
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,7 +84,7 @@
                     <a href="business.html" class="text-gray-600 hover:text-blue-700">Business English</a>
                     <a href="conversation.html" class="text-gray-600 hover:text-blue-700">Conversational English</a>
                     <a href="exam-prep.html" class="text-gray-600 hover:text-blue-700">Exam Preparation</a>
-                    <a href="contact.html" class="text-gray-600 hover:text-blue-700">Contact</a>
+                    <a href="contact.html" class="btn btn-primary">Contact</a>
                 </div>
                 <div class="md:hidden">
                     <button id="menu-btn" class="text-gray-700 focus:outline-none">
@@ -43,7 +97,7 @@
                  <a href="business.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Business English</a>
                  <a href="conversation.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Conversational English</a>
                  <a href="exam-prep.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Exam Preparation</a>
-                 <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Contact</a>
+                 <a href="contact.html" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50">Contact</a>
             </div>
         </header>
 
@@ -60,77 +114,91 @@
                 </div>
             </section>
 
-            <!-- Services Section -->
-            <section id="services" class="py-16 md:py-24 bg-blue-50">
-                <div class="container mx-auto px-6">
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <!-- Service Card 1 -->
-                        <div class="card text-center p-8 animate-on-scroll" style="transition-delay: 100ms;">
-                            <div class="flex justify-center mb-4 h-40">
-                                <a href="business.html"><img src="https://static.wixstatic.com/media/0f55f2_f9f793af7f2047e3934b57ce8a2d1f4f~mv2.jpg" alt="Business English" class="h-full w-auto object-cover rounded-lg"></a>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Business English</h3>
-                            <p class="text-gray-600">Master the language of the corporate world. From meetings and presentations to emails and negotiations.</p>
+            <!-- Services Banners Section -->
+            <section id="services" class="py-16 md:py-24 bg-blue-50 space-y-16">
+
+                <!-- Business English Banner -->
+                <div class="container mx-auto px-6 animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white rounded-xl shadow-lg overflow-hidden p-8">
+                        <div class="md:w-1/2 text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">Business English</h2>
+                            <p class="text-gray-600 mb-6">Master the language of the corporate world. From meetings and presentations to emails and negotiations, we'll equip you with the skills you need to succeed professionally.</p>
+                            <a href="business.html" class="btn btn-primary">Learn More</a>
                         </div>
-                        <!-- Service Card 2 -->
-                        <div class="card text-center p-8 animate-on-scroll" style="transition-delay: 200ms;">
-                           <div class="flex justify-center mb-4 h-40">
-                                <img src="https://static.wixstatic.com/media/0f55f2_78ab4c9e2ff74ac4ace5b4f4abd575a8~mv2.png" alt="Conversational English" class="h-full w-auto object-cover rounded-lg">
-                            </div>
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Conversational English</h3>
-                            <p class="text-gray-600">Build fluency and confidence for everyday conversations, travel, and social situations.</p>
-                        </div>
-                        <!-- Service Card 3 -->
-                         <div class="card text-center p-8 animate-on-scroll" style="transition-delay: 300ms;">
-                           <div class="flex justify-center mb-4 h-40">
-                                <img src="https://static.wixstatic.com/media/0f55f2_d407d35463f34bda97aa4380b4f91264~mv2.jpg" alt="Exam Preparation" class="h-full w-auto object-cover rounded-lg">
-                            </div>
-                            <h3 class="text-xl font-bold mb-2 text-gray-800">Exam Preparation</h3>
-                            <p class="text-gray-600">Get ready for language exams like FCE, CAE, and IELTS with targeted strategies and practice.</p>
+                        <div class="md:w-1/2">
+                            <img src="https://johanka2014.github.io/englishunpacked/meeting.png" alt="Business English" class="w-full h-auto object-cover rounded-lg shadow-xl">
                         </div>
                     </div>
                 </div>
+
+                <!-- Conversational English Banner -->
+                 <div class="container mx-auto px-6 animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 bg-white rounded-xl shadow-lg overflow-hidden p-8">
+                        <div class="md:w-1/2 text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">Conversational English</h2>
+                            <p class="text-gray-600 mb-6">Build fluency and confidence for everyday conversations. We focus on practical, real-world scenarios to help you communicate naturally and effectively.</p>
+                            <a href="conversation.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://johanka2014.github.io/englishunpacked/zoom_meeting.png" alt="Conversational English" class="w-full h-auto object-cover rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exam Preparation Banner -->
+                 <div class="container mx-auto px-6 animate-on-scroll" style="transition-delay: 300ms;">
+                    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white rounded-xl shadow-lg overflow-hidden p-8">
+                        <div class="md:w-1/2 text-center md:text-left">
+                            <h2 class="text-3xl font-bold text-gray-800 mb-4">Exam Preparation</h2>
+                            <p class="text-gray-600 mb-6">Get ready for language exams like FCE, CAE, and IELTS with targeted strategies and practice. We'll help you build the skills and confidence to achieve your best score.</p>
+                            <a href="exam-prep.html" class="btn btn-primary">Learn More</a>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="https://johanka2014.github.io/englishunpacked/classroom.png" alt="Exam Preparation" class="w-full h-auto object-cover rounded-lg shadow-xl">
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <!-- About Me Section -->
-            <section id="about" class="py-20 md:py-32 bg-no-repeat bg-center relative" style="background-image: url('https://static.wixstatic.com/media/0f55f2_3cd6e226033244219689b270c1e1258a~mv2.jpg/v1/fill/w_960,h_656,fp_0.39_0.53,q_85,enc_avif,quality_auto/skyscrapers%202.jpg');">
-                <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row md:justify-end">
-                    <div class="animate-on-scroll md:w-1/2 md:mt-16 bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-2xl border-x-4 border-blue-600">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Hi, I'm Joanna</h2>
-                        <p class="text-gray-800 mb-4">After a decade in the fast-paced electronics industry, I discovered my true passion: helping people unlock their potential through language. I moved to the Czech Republic, earned my TEFL qualification in 2011, and I've been teaching English ever since.</p>
-                        <p class="text-gray-800 mb-4">My approach is simple: learning should be engaging, relevant, and rewarding. I tailor every single lesson to your specific goals, whether that's acing a business presentation or simply ordering a coffee with confidence. We'll use real-world materials and focus on practical conversation to make your learning stick.</p>
-                        <p class="font-semibold text-blue-800">Let's start this journey together!</p>
+            <section id="about" class="py-20 md:py-32 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                        <!-- Image Column -->
+                        <div class="md:w-1/3">
+                            <img src="https://johanka2014.github.io/englishunpacked/jocrop-modified.png" alt="A photo of Joanna, the English tutor" class="rounded-full w-64 h-64 mx-auto object-cover shadow-xl ring-4 ring-blue-500/30 ring-offset-4 ring-offset-white">
+                        </div>
+                        <!-- Text Column -->
+                        <div class="md:w-2/3 text-center md:text-left">
+                            <h2 class="text-4xl font-bold text-gray-800 mb-4">Hi, I'm Joanna</h2>
+                            <p class="text-gray-600 text-lg mb-4">After a decade in the fast-paced electronics industry, I discovered my true passion: helping people unlock their potential through language. I moved to the Czech Republic, earned my TEFL qualification in 2011, and I've been teaching English ever since.</p>
+                            <p class="text-gray-600 text-lg mb-4">My approach is simple: learning should be engaging, relevant, and rewarding. I tailor every single lesson to your specific goals, whether that's acing a business presentation or simply ordering a coffee with confidence. We'll use real-world materials and focus on practical conversation to make your learning stick.</p>
+                            <p class="font-semibold text-blue-700 text-lg">Let's start this journey together!</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Process Section -->
-            <section id="process" class="py-16 md:py-24">
+            <section id="process" class="py-16 md:py-24 bg-white">
                 <div class="container mx-auto px-6">
                     <h2 class="section-title animate-on-scroll">Your Learning Journey</h2>
-                    <div class="relative">
-                        <!-- The connecting line -->
-                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-blue-300 transform -translate-y-1/2"></div>
-                        
-                        <div class="grid md:grid-cols-3 gap-16 text-center">
-                            <!-- Step 1 -->
-                            <div class="relative animate-on-scroll" style="transition-delay: 100ms;">
-                                <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 z-10 relative shadow-lg">1</div>
-                                <h3 class="text-xl font-bold mb-2 text-gray-800">Assess</h3>
-                                <p class="text-gray-600">We'll start with a friendly chat to understand your current level, needs, and learning style.</p>
-                            </div>
-                            <!-- Step 2 -->
-                            <div class="relative animate-on-scroll" style="transition-delay: 200ms;">
-                                <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 z-10 relative shadow-lg">2</div>
-                                <h3 class="text-xl font-bold mb-2 text-gray-800">Customize</h3>
-                                <p class="text-gray-600">I'll create a personalized curriculum with materials and activities that are perfect for you.</p>
-                            </div>
-                            <!-- Step 3 -->
-                            <div class="relative animate-on-scroll" style="transition-delay: 300ms;">
-                                <div class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4 z-10 relative shadow-lg">3</div>
-                                <h3 class="text-xl font-bold mb-2 text-gray-800">Succeed</h3>
-                                <p class="text-gray-600">Through one-on-one sessions, you'll see your skills and confidence grow lesson by lesson.</p>
-                            </div>
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <!-- Step 1 Card -->
+                        <div class="bg-blue-600 text-white rounded-xl shadow-lg p-8 animate-on-scroll" style="transition-delay: 100ms;">
+                            <h3 class="text-2xl font-bold text-yellow-300 mb-4">Assess</h3>
+                            <p class="text-gray-200">We'll start with a friendly chat to understand your current level, needs, and learning style.</p>
+                        </div>
+                        <!-- Step 2 Card -->
+                        <div class="bg-blue-600 text-white rounded-xl shadow-lg p-8 animate-on-scroll" style="transition-delay: 200ms;">
+                            <h3 class="text-2xl font-bold text-yellow-300 mb-4">Customize</h3>
+                            <p class="text-gray-200">I'll create a personalized curriculum with materials and activities that are perfect for you.</p>
+                        </div>
+                        <!-- Step 3 Card -->
+                        <div class="bg-blue-600 text-white rounded-xl shadow-lg p-8 animate-on-scroll" style="transition-delay: 300ms;">
+                            <h3 class="text-2xl font-bold text-yellow-300 mb-4">Succeed</h3>
+                            <p class="text-gray-200">Through one-on-one sessions, you'll see your skills and confidence grow lesson by lesson.</p>
                         </div>
                     </div>
                 </div>
@@ -195,35 +263,40 @@
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
                 });
-            });
+
+                document.querySelectorAll('#mobile-menu a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
 
             // Intersection Observer for scroll animations
             const scrollElements = document.querySelectorAll('.animate-on-scroll');
             
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target); // Animate only once
-                    }
+            if (scrollElements.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Animate only once
+                        }
+                    });
+                }, {
+                    threshold: 0.1 // Trigger when 10% of the element is visible
                 });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            });
 
-            scrollElements.forEach(element => {
-                observer.observe(element);
-            });
+                scrollElements.forEach(element => {
+                    observer.observe(element);
+                });
+            }
         });
     </script>
 
 </body>
 </html>
+
